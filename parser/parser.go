@@ -16,7 +16,7 @@ type News struct {
 }
 
 func ParseNosuNews(startPage, endPage uint) ([]News, error) {
-	newsList := make([]News, 0, (endPage-startPage+1)*10)
+	newsList := make([]News, 0, 100)
 
 	c := colly.NewCollector(
 		colly.AllowedDomains("www.nosu.ru"),
